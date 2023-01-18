@@ -1,0 +1,88 @@
+@tailwind utilities;
+
+.featured-image-edit-modal {
+    @apply flex flex-col flex-wrap sm:flex-nowrap;
+
+    .image-container {
+        @apply relative w-[974px] h-[360px] mx-auto;
+
+        figure {
+
+            img {
+                @apply absolute block object-cover w-full h-full;
+            }
+        }
+        .text-content {
+            @apply absolute left-0 top-0 bottom-0 w-full flex;
+
+            h3 {
+                @apply flex flex-col p-6 w-full grow justify-center z-50;
+            }
+
+            .gradient {
+                @apply absolute h-full w-[60%];
+            }
+            .flash-badge {
+                @apply py-2 px-4 bg-red-600 text-white font-bold text-xs rounded-lg absolute;
+
+                &.top-right {@apply top-5 right-5;}
+                &.top-left {@apply top-5 left-5;}
+                &.bottom-left {@apply bottom-5 left-5;}
+                &.bottom-right {@apply bottom-5 right-5;}
+
+            }
+        }
+    }
+    .fields {
+        @apply border-t my-4 py-4 flex flex-col;
+
+        .top-fields {
+            @apply grid grid-cols-4 py-2 gap-2;
+
+            .field {
+                @apply flex items-center px-1;
+
+                select {
+                    @apply text-xs rounded-lg border-gray-400;
+                }
+            }
+        }
+        .lines {
+            @apply grid grid-cols-3 gap-4 justify-center;
+
+            .line {
+                @apply flex flex-col gap-2;
+
+                textarea {
+                    @apply rounded-lg border-gray-300 resize-none text-xs;
+                    &:focus {
+                        --tw-border-opacity:1;
+                        border-color:rgb(245 158 11/var(--tw-border-opacity));
+                        --tw-ring-opacity:1;
+                        --tw-ring-color: rgb(245 158 11/var(--tw-ring-opacity))
+                    }
+                }
+                .inputs {
+                    @apply grid grid-cols-5 gap-2;
+
+                    .item {
+                        @apply flex flex-col text-xs;
+
+                        input[type=text], input[type=number] {
+                            //block w-full transition duration-75 rounded-lg shadow-sm focus:border-primary-500
+                            // focus:ring-primary-500
+                            @apply block w-full transition duration-75 rounded-lg shadow-sm focus:ring-1 focus:ring-inset disabled:opacity-70 border-gray-300 text-xs;
+                            &:focus {
+                                --tw-border-opacity:1;
+                                border-color:rgb(245 158 11/var(--tw-border-opacity));
+                                --tw-ring-opacity:1;
+                                --tw-ring-color: rgb(245 158 11/var(--tw-ring-opacity))
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

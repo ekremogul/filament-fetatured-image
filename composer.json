@@ -1,0 +1,37 @@
+{
+    "name": "ekremogul/filament-featured-image",
+    "description": "Featured Image Design For FilamentPHP",
+    "keywords": [
+        "ekremogul",
+        "laravel",
+        "filamentphp",
+        "filament-featured-image"
+    ],
+    "homepage": "https://github.com/ekremogul/filament-featured-image",
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ekremogul\\FilamentFeaturedImage\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ekrem OĞUL",
+            "email": "ekremogul@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ekremogul\\FilamentFeaturedImage\\FilamentFeaturedImageServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
